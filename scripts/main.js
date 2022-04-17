@@ -10,8 +10,10 @@ export const st = new Student("Andru", "Lopez", "avatar.png", 25, EducationLevel
 console.log(st);
 let studentTable = document.getElementById("student");
 let statsTable = document.getElementById('stats');
+let coursesTable = document.getElementById('courses');
 showStudentData(st);
 showStats(st);
+showCourses(st);
 function showStudentData(student) {
     let tbodyStudent = document.createElement("tbody");
     tbodyStudent.innerHTML = `<tr><td colspan=2><img src="./${student.avatar}" height="100"></td></tr>
@@ -26,4 +28,17 @@ function showStats(student) {
     let trElement = document.createElement("tr");
     trElement.innerHTML = `<td><b>Certified courses</b></td><td>${certifiedNumber}</td>`;
     statsTable.appendChild(trElement);
+}
+function showCourses(student) {
+    let coursesTbody = document.createElement("tbody");
+    for (let course of student.courses) {
+        let trElement = document.createElement("tr");
+        trElement.innerHTML = `<td>${course.name}</td>
+        <td>${course.hours}</td>
+        <td>${course.score}</td>
+        <td>${course.certified}</td>
+        <td>${course.year}</td>`;
+        coursesTbody.appendChild(trElement);
+    }
+    coursesTable.appendChild(coursesTbody);
 }

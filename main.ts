@@ -14,9 +14,12 @@ console.log(st);
 
 let studentTable: HTMLElement = document.getElementById("student")!;
 let statsTable:HTMLElement = document.getElementById('stats')!;
+let coursesTable:HTMLElement = document.getElementById('courses')!;
+
 
 showStudentData(st);
 showStats(st);
+showCourses(st);
 
 function showStudentData(student: Student):void{
     let tbodyStudent = document.createElement("tbody");
@@ -34,4 +37,19 @@ function showStats(student: Student):void{
     trElement.innerHTML = `<td><b>Certified courses</b></td><td>${certifiedNumber}</td>`;
     statsTable.appendChild(trElement);
 
+}
+
+function showCourses(student: Student): void{
+    let coursesTbody: HTMLElement = document.createElement("tbody");
+    for(let course of student.courses)
+    {
+        let trElement:HTMLElement = document.createElement("tr");
+        trElement.innerHTML = `<td>${course.name}</td>
+        <td>${course.hours}</td>
+        <td>${course.score}</td>
+        <td>${course.certified}</td>
+        <td>${course.year}</td>`
+        coursesTbody.appendChild(trElement);
+    }
+    coursesTable.appendChild(coursesTbody);
 }
