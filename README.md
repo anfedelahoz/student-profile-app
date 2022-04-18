@@ -1,5 +1,5 @@
 # student-profile-app
-App built in TypeScript to display academic information of a student 
+TypeScript project to display academic information of a student 
 
 
 ## Conceptual Design
