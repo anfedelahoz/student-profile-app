@@ -6,6 +6,7 @@
     <title>Student's Profile with TypeScript</title>
     <link rel="icon" href="data:," />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/syle.css">
     <script type="module" src="./scripts/main.js"></script>
   </head>
   <body>
@@ -14,8 +15,10 @@
     <h2>Stats</h2>
     <table class="table" id="stats"></table>
     <h2>Courses taken</h2>
-    <input type="text" class="form-control" id="search-text" placeholder="Filter by name">
-    <button class="button" id="button-filter" class="btn btn-success">Apply</button>
+    <div class="form">
+        <input type="text" class="form-control" id="search-text" placeholder="Filter by name">
+        <button class="button" id="button-filter" class="btn btn-success">Apply</button>
+    </div>
     <table class="table" id="courses">
         <thead class="thead-dark">
             <tr>

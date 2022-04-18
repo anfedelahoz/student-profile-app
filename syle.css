@@ -1,0 +1,59 @@
+@import url('https:fonts.googleapis.com/css?family=B612');
+
+h1,h2{
+    text-align: center;
+}
+
+body {
+    font-family: "B612";
+    font-size: 18px;
+}
+
+
+#student {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border: solid 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#stats {
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+}
+
+.form {
+    text-align: center;
+}
+
+#courses{
+    margin-top:0.6em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    
+}
+
+.thead-dark{
+    background-color: hsl(186,35%,90%);
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#courses tr{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#courses th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#courses tr:hover {background-color: #ddd;}
